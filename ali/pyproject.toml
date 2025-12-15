@@ -1,0 +1,32 @@
+[project]
+name = "alina"
+version = "0.1.0"
+description = "ALINA is an assistant for learning and job recommendation."
+readme = "README.md"
+authors = [
+    { name = "Guillaume POUSSEL", email = "guillaume.poussel@capgemini.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "asyncer>=0.0.9",
+    "boto3>=1.40.53",
+    "mistralai>=1.9.11",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.5",
+    "rich>=14.2.0",
+    "strands-agents-tools>=0.2.11",
+    "strands-agents[mistral,openai]>=1.12.0",
+    "typer>=0.19.2",
+    "types-boto3[bedrock]>=1.40.54",
+    "xlsxwriter>=3.2.9",
+]
+
+[project.scripts]
+alina = "alina:main"
+
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.isort]
+profile = "black"
